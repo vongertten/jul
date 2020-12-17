@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  background-color: black;
+}
+
+
+/* === ABSOLUTE === */
+.ghost {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  display: none;
+}
+
+.ghost img {
+  width: 100%;
+}
+
+/* === FONT === */
+
+* {
+  font-family: "Feltro Normal", cursive;
+}
+
+nav {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+}
+
+p {
+  padding-bottom: 0;
+}
+
+a:hover {
+  color: rgb(73, 39, 39);
+}
+
+/* === WRAPPER === */
+
+.wrapper {
+  width: 80vw;
+  height: auto;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+}
+
+/* === HEADER === */
+
+header {
+
+}
+
+.header--logo {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+  transform: translateX(-10%);
+}
+
+/* === NAV === */
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  background-color: rgb(190, 33, 33);
+}
+
+nav li {
+  display: inline;
+  margin-right: 1em;
+}
+
+/* === SECTIONS === */
+
+section {
+  margin-bottom: 5em;
+  /*   min-height: 50vh; */
+}
+
+.first {
+  position: relative;
+  
+}
+
+.first::after {
+  content: "";
+  position: absolute;
+  bottom: -2.5em;
+  height: 3px;
+  background-color: #f70202;
+  left: 20%;
+  right: 20%;
+}
+
+.julkula {
+  width: 17%;
+  float: right;
+}
+
+.first--text {
+  width: 60%;
+  display: inline-block;
+}
+
+
+.first p {
+  position: relative;
+  left: 20px;
+}
+
+.first p::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  height: 100%;
+  width: 3px;
+  background-color: rgb(255, 0, 0);
+
+}
+
+.second {
+  /* background-color: red; */
+}
+
+.second--wrapper {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  line-height: 2.5;
+}
+
+.third {
+  outline: 3px solid black;
+  outline-offset: 1em;
+}
+
+.grid--wrapper {
+  display: grid;
+  grid: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-gap: 8px;
+}
+
+.grid--wrapper img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.fourth {
+}
+
+.fourth ol {
+  margin: 0;
+  /* padding: 0; */
+}
+
+.fourth ul {
+  margin-left: -2em;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  border: 30px solid orange;
+}
+
+/* === MEDIA QUERY === */
+
+@media (max-width: 800px) {
+  .first {
+    height: auto;
+  }
+  .first--text {
+    width: 100%;
+  }
+
+  .first img {
+    display: inline;
+    width: 100%;
+    float: none;
+  }
+}
+
+ 
+.snow1
+{
+	background:url(snow.png);
+	background-repeat:repeat;
+  width:100%;
+  height:100vh;
+	top:0;
+	left:0;
+  animation:animateOne 30s infinite linear;
+  position: fixed;
+  z-index: -100;
+
+} 
+
+.snow2
+{
+	background:url(snow.png);
+  background-repeat:repeat;
+  background-color: rgb(179, 176, 176);
+  width:100%;
+  height:100vh;
+	position:fixed ;
+	top:0;
+	left:0;
+	animation:animateSecond 30s infinite linear;
+  z-index: -100;
+} 
+
+
+
+@keyframes animateOne
+{
+	0%
+	{
+		background-position: 0px 0px
+	}
+
+	100%
+	{
+		background-position: 100px 650px
+	} 
+}
+
+
+@keyframes animateSecond
+{
+	0%
+	{
+		background-position: 0px -100px
+	}
+
+	100%
+	{
+		background-position: 0px 650px
+	}
+}
